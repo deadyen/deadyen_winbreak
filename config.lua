@@ -13,13 +13,13 @@ SendNotification = function(text)
 	if Config.Notification == 'ox_lib' then
 		lib.notify({title = text})
 	elseif Config.Notification == 'qb' then
-        QBCore.Functions.Notify(text)
+        	QBCore.Functions.Notify(text)
 	elseif Config.Notification == 'esx' then
-        ESX.ShowNotification(text)
+        	ESX.ShowNotification(text)
 	elseif Config.Notification == 'native' then
-        AddTextEntry('notification', text)
-        BeginTextCommandThefeedPost('notification')
-        AddTextComponentSubstringPlayerName(text)
-        EndTextCommandThefeedPostTicker(true, true)
+        	AddTextEntry('notification', text)
+        	BeginTextCommandThefeedPost('notification')
+       		AddTextComponentSubstringPlayerName(text)
+        	EndTextCommandThefeedPostTicker(true, true)
 	end
 end
